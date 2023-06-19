@@ -1,0 +1,29 @@
+{
+  "Ores": "Ores",
+
+  "block.nf.uranium_ore": "Uranium Ore",
+  "block.nf.plutonium_ore": "Plutonium Ore",
+  "block.nf.thorium_ore": "Thorium Ore",
+  "block.nf.titanium_ore": "Titanium Ore",
+  "block.nf.silicon_ore": "Silicon Ore",
+  "block.nf.bauxite_ore": "Bauxite Ore",
+  "block.nf.cobalt_ore": "Cobalt Ore",
+  "block.nf.lithium_ore": "Lithium Ore",
+  "block.nf.platinum_ore": "Platinum Ore",
+  "block.nf.plasmaite_ore": "Plasmaite Ore",
+  "block.nf.magnesium_ore": "Magnesium Ore",
+
+  "Deepslate": "Deepslate",
+
+  "block.nf.deepslate_uranium_ore": "Deepslate Uranium Ore",
+  "block.nf.deepslate_plutonium_ore": "Deepslate Plutonium Ore",
+  "block.nf.deepslate_thorium_ore": "Deepslate Thorium Ore",
+  "block.nf.deepslate_titanium_ore": "Deepslate Titanium Ore",
+  "block.nf.deepslate_silicon_ore": "Deepslate Silicon Ore",
+  "block.nf.deepslate_bauxite_ore": "Deepslate Bauxite Ore",
+  "block.nf.deepslate_cobalt_ore": "Deepslate Cobalt Ore",
+  "block.nf.deepslate_lithium_ore": "Deepslate Lithium Ore",
+  "block.nf.deepslate_platinum_ore": "Deepslate Platinum Ore",
+  "block.nf.deepslate_plasmaite_ore": "Deepslate Plasmaite Ore",
+  "block.nf.deepslate_magnesium_ore": "Deepslate Magnesium Ore"
+}
