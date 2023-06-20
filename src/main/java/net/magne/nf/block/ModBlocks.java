@@ -20,10 +20,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, NucoreFoundation.MODID);
 
-    public static final RegistryObject<Block> TEST = registerBlock("test",
-            () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(2f).requiresCorrectToolForDrops()));
-
 
 public static final RegistryObject<Block> URANIUM_ORE = registerOre("uranium_ore");
 
