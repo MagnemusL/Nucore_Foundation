@@ -25,27 +25,27 @@ public class ModBlocks {
                     .strength(2f).requiresCorrectToolForDrops()));
 
 
-public static final RegistryObject<Block> URANIUM_ORE = registerOreItem("uranium_ore");
+public static final RegistryObject<Block> URANIUM_ORE = registerOre("uranium_ore");
 
-public static final RegistryObject<Block> PLUTONIUM_ORE = registerOreItem("plutonium_ore");
+public static final RegistryObject<Block> PLUTONIUM_ORE = registerOreEnder("plutonium_ore");
 
-public static final RegistryObject<Block> THORIUM_ORE = registerOreItem("thorium_ore");
+public static final RegistryObject<Block> THORIUM_ORE = registerOre("thorium_ore");
 
-public static final RegistryObject<Block> TITANIUM_ORE = registerOre("titanium_ore", () -> new Block(BlockBehaviour.Properties.of()));
+public static final RegistryObject<Block> TITANIUM_ORE = registerOre("titanium_ore");
 
-public static final RegistryObject<Block> SILICON_ORE = registerOre("silicon_ore", () -> new Block(BlockBehaviour.Properties.of()));
+public static final RegistryObject<Block> SILICON_ORE = registerOre("silicon_ore");
 
-public static final RegistryObject<Block> BAUXITE_ORE = registerOre("bauxite_ore", () -> new Block(BlockBehaviour.Properties.of()));
+public static final RegistryObject<Block> BAUXITE_ORE = registerOre("bauxite_ore");
 
-public static final RegistryObject<Block> COBALT_ORE = registerOre("cobalt_ore", () -> new Block(BlockBehaviour.Properties.of()));
+public static final RegistryObject<Block> COBALT_ORE = registerOre("cobalt_ore");
 
-public static final RegistryObject<Block> LITHIUM_ORE = registerOreItem("lithium_ore");
+public static final RegistryObject<Block> LITHIUM_ORE = registerOre("lithium_ore");
 
-public static final RegistryObject<Block> PLATINUM_ORE = registerOre("platinum_ore", () -> new Block(BlockBehaviour.Properties.of()));
+public static final RegistryObject<Block> PLATINUM_ORE = registerOre("platinum_ore");
 
-public static final RegistryObject<Block> PLASMAITE_ORE = registerOreItem("plasmaite_ore");
+public static final RegistryObject<Block> PLASMAITE_ORE = registerOre("plasmaite_ore");
 
-public static final RegistryObject<Block> MAGNESIUM_ORE = registerOre("magnesium_ore", () -> new Block(BlockBehaviour.Properties.of()));
+public static final RegistryObject<Block> MAGNESIUM_ORE = registerOre("magnesium_ore");
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -54,12 +54,13 @@ public static final RegistryObject<Block> MAGNESIUM_ORE = registerOre("magnesium
         return toReturn;
     }
 
-    public static <T extends Block>RegistryObject<T> registerOreItem(String name) {
+    public static <T extends Block>RegistryObject<T> registerOre(String name) {
         registerBlock(name,
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                         .strength(2f)
                         .explosionResistance(1f)
                         .requiresCorrectToolForDrops()));
+
         registerBlock("deepslate_" + name,
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                         .strength(2f)
@@ -68,20 +69,46 @@ public static final RegistryObject<Block> MAGNESIUM_ORE = registerOre("magnesium
         return null;
     }
 
-    public static <T extends Block>RegistryObject<T> registerOre(String name, Supplier<T> block) {
+    public static <T extends Block>RegistryObject<T> registerOreEnder(String name) {
         registerBlock(name,
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                         .strength(2f)
                         .explosionResistance(1f)
                         .requiresCorrectToolForDrops()));
+
         registerBlock("deepslate_" + name,
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                         .strength(2f)
                         .explosionResistance(1f)
                         .requiresCorrectToolForDrops()));
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
+
+        registerBlock("ender_" + name,
+                () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
+                        .strength(2f)
+                        .explosionResistance(1f)
+                        .requiresCorrectToolForDrops()));
+        return null;
+    }
+
+    public static <T extends Block>RegistryObject<T> registerOreNether(String name) {
+        registerBlock(name,
+                () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
+                        .strength(2f)
+                        .explosionResistance(1f)
+                        .requiresCorrectToolForDrops()));
+
+        registerBlock("deepslate_" + name,
+                () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
+                        .strength(2f)
+                        .explosionResistance(1f)
+                        .requiresCorrectToolForDrops()));
+
+        registerBlock("nether_" + name,
+                () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
+                        .strength(2f)
+                        .explosionResistance(1f)
+                        .requiresCorrectToolForDrops()));
+        return null;
     }
 
     private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {

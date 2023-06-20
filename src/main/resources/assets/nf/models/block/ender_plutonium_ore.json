@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "nf:block/ender_plutonium_ore"
+  }
+}
