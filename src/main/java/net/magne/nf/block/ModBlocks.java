@@ -1,6 +1,7 @@
 package net.magne.nf.block;
 
 import net.magne.nf.NucoreFoundation;
+import net.magne.nf.creativetabs.ModCreativeTabs;
 import net.magne.nf.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -15,6 +16,9 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.util.Properties;
 import java.util.function.Supplier;
+
+import static net.magne.nf.creativetabs.ModCreativeTabs.addOreToTab;
+import static net.magne.nf.creativetabs.ModCreativeTabs.addToTab;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -51,17 +55,19 @@ public static final RegistryObject<Block> MAGNESIUM_ORE = registerOre("magnesium
     }
 
     public static <T extends Block>RegistryObject<T> registerOre(String name) {
+        addOreToTab(
         registerBlock(name,
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                         .strength(2f)
                         .explosionResistance(1f)
-                        .requiresCorrectToolForDrops()));
+                        .requiresCorrectToolForDrops())));
 
+        addOreToTab(
         registerBlock("deepslate_" + name,
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                         .strength(2f)
                         .explosionResistance(1f)
-                        .requiresCorrectToolForDrops()));
+                        .requiresCorrectToolForDrops())));
         return null;
     }
 

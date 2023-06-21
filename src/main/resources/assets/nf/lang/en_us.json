@@ -35,7 +35,18 @@
 
   "item.nf.test_ingot": "Test Ingot",
 
+  "Blueprints": "Blueprints",
+
+  "item.nf.blueprint": "Blueprint",
+  "item.nf.blueprint_book": "Blueprint Book",
+  "item.nf.machine_blueprint": "Machine Blueprint",
+  "item.nf.fluid_blueprint": "Fluid Blueprint",
+  "item.nf.material_blueprint": "Material Blueprint",
+
   "Powder": "Powder",
 
-  "item.nf.sulfur_powder": "Sulfur Powder"
+  "item.nf.sulfur_powder": "Sulfur Powder",
+
+  "Tabs": "Tabs",
+  "itemGroup.nf_basics": "Nucore: Foundation Basics"
 }

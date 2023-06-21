@@ -1,6 +1,7 @@
 package net.magne.nf;
 
 import net.magne.nf.block.ModBlocks;
+import net.magne.nf.creativetabs.ModCreativeTabs;
 import net.magne.nf.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +18,7 @@ public class NucoreFoundation {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModCreativeTabs.TABS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
