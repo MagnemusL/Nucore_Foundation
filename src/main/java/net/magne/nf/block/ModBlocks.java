@@ -1,11 +1,11 @@
 package net.magne.nf.block;
 
 import net.magne.nf.NucoreFoundation;
-import net.magne.nf.creativetabs.ModCreativeTabs;
+import net.magne.nf.block.custom.LithiumBlock;
 import net.magne.nf.item.ModItems;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -14,10 +14,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.Properties;
 import java.util.function.Supplier;
 
-import static net.magne.nf.creativetabs.ModCreativeTabs.addOreToTab;
 import static net.magne.nf.creativetabs.ModCreativeTabs.addToTab;
 
 public class ModBlocks {
@@ -39,13 +37,17 @@ public static final RegistryObject<Block> BAUXITE_ORE = registerOre("bauxite_ore
 
 public static final RegistryObject<Block> COBALT_ORE = registerOre("cobalt_ore");
 
-public static final RegistryObject<Block> LITHIUM_ORE = registerOre("lithium_ore");
-
 public static final RegistryObject<Block> PLATINUM_ORE = registerOre("platinum_ore");
 
 public static final RegistryObject<Block> PLASMAITE_ORE = registerOre("plasmaite_ore");
 
 public static final RegistryObject<Block> MAGNESIUM_ORE = registerOre("magnesium_ore");
+
+public static final RegistryObject<Block> LITHIUM_ORE = addToTab(registerBlock("lithium_ore",
+        () -> new LithiumBlock(BlockBehaviour.Properties.of()
+                .strength(2f)
+                .explosionResistance(0.3f)
+                .requiresCorrectToolForDrops())));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
@@ -54,15 +56,27 @@ public static final RegistryObject<Block> MAGNESIUM_ORE = registerOre("magnesium
         return toReturn;
     }
 
+    /*public static <T extends Block> RegistryObject<T> registerLithium(String name) {
+        addLithiumToTab(
+                registerBlock(name,
+                        () -> new LithiumReactionBlock(BlockBehaviour.Properties.of()
+                                .strength(2f)
+                                .explosionResistance(1f)
+                                .requiresCorrectToolForDrops())));
+        return null;
+
+    }
+    */
+
     public static <T extends Block>RegistryObject<T> registerOre(String name) {
-        addOreToTab(
+        addToTab(
         registerBlock(name,
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                         .strength(2f)
                         .explosionResistance(1f)
                         .requiresCorrectToolForDrops())));
 
-        addOreToTab(
+        addToTab(
         registerBlock("deepslate_" + name,
                 () -> new DropExperienceBlock(BlockBehaviour.Properties.of()
                         .strength(2f)

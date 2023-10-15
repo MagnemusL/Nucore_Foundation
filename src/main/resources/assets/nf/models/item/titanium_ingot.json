@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "nf:item/b"
+    "layer0": "nf:item/titanium_ingot"
   }
 }

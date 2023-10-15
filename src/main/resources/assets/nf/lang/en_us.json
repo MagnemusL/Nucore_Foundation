@@ -33,7 +33,18 @@
 
   "Ingots": "Ingots",
 
-  "item.nf.test_ingot": "Test Ingot",
+  "item.nf.bauxite_ingot": "Bauxite Ingot",
+  "item.nf.cobalt_ingot": "Cobalt Ingot",
+  "item.nf.lithium_ingot": "Lithium Ingot",
+  "item.nf.magnesium_ingot": "Magnesium Ingot",
+  "item.nf.plasmaite_ingot": "Plasmaite Ingot",
+  "item.nf.platinum_ingot": "Platinum Ingot",
+  "item.nf.plutonium_ingot": "Plutonium Ingot",
+  "item.nf.silicon_ingot": "Silicon Ingot",
+  "item.nf.thorium_ingot": "Thorium Ingot",
+  "item.nf.titanium_ingot": "Titanium Ingot",
+  "item.nf.uranium_ingot": "Uranium Ingot",
+
 
   "Blueprints": "Blueprints",
 

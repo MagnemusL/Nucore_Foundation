@@ -32,12 +32,7 @@ public class ModCreativeTabs {
                     })
                     .build()
     );
-
-    public static <T extends Item> RegistryObject<T> addToTab(RegistryObject<T> itemLike) {
-        NF_BASICS_ITEMS.add(itemLike);
-        return itemLike;
-    }
-    public static RegistryObject<DropExperienceBlock> addOreToTab(RegistryObject<DropExperienceBlock> itemLike) {
+    public static <T extends ItemLike> RegistryObject<T> addToTab(RegistryObject<T> itemLike) {
         NF_BASICS_ITEMS.add(itemLike);
         return itemLike;
     }

@@ -35,6 +35,18 @@ public class ModItems {
 
     public static final RegistryObject<Item> MATERIAL_BLUEPRINT = registerBlueprint("material_blueprint");
 
+    public static final RegistryObject<Item> BAUXITE_INGOT = registerIngot("bauxite_ingot");
+    public static final RegistryObject<Item> COBALT_INGOT = registerIngot("cobalt_ingot");
+    public static final RegistryObject<Item> LITHIUM_INGOT = ITEMS.register("lithium_ingot",
+            () -> );
+    public static final RegistryObject<Item> MAGNESIUM_INGOT = registerIngot("magnesium_ingot");
+    public static final RegistryObject<Item> PLASMAITE_INGOT = registerIngot("plasmaite_ingot");
+    public static final RegistryObject<Item> PLATINUM_INGOT = registerIngot("platinum_ingot");
+    public static final RegistryObject<Item> PLUTONIUM_INGOT = registerIngot("plutonium_ingot");
+    public static final RegistryObject<Item> SILICON_INGOT = registerIngot("silicon_ingot");
+    public static final RegistryObject<Item> THORIUM_INGOT = registerIngot("thorium_ingot");
+    public static final RegistryObject<Item> TITANIUM_INGOT = registerIngot("titanium_ingot");
+    public static final RegistryObject<Item> URANIUM_INGOT = registerIngot("uranium_ingot");
 
 
     public static <T extends Item> RegistryObject<T> registerIngot(String name) {
